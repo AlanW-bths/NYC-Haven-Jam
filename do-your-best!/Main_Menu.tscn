@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://b28oo23mwfx3d" path="res://Assets/Quit_hover.png" id="7_3kq1t"]
 [ext_resource type="Texture2D" uid="uid://7wmxc3oragyq" path="res://Assets/pipe_intersection.png" id="7_5cvai"]
 [ext_resource type="Texture2D" uid="uid://dauguxp35h5xa" path="res://Assets/title.png" id="11_spy7q"]
-[ext_resource type="Texture2D" uid="uid://ca3nll67abyoi" path="res://Assets/cheese.png" id="12_5nrr4"]
 
 [node name="Main Menu" type="Control" unique_id=1987918872]
 layout_mode = 3
@@ -53,22 +52,6 @@ texture_pressed = ExtResource("6_teegn")
 texture_hover = ExtResource("7_3kq1t")
 texture_disabled = ExtResource("6_teegn")
 stretch_mode = 5
-
-[node name="Main" parent="." unique_id=875315298 instance=ExtResource("3_gtid3")]
-visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 7300.0
-offset_bottom = 4067.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
-wait_time = 0.9
 
 [node name="pipeline5" type="Node2D" parent="." unique_id=622394510]
 position = Vector2(944.99994, 922.99994)
@@ -867,11 +850,25 @@ position = Vector2(186, 293)
 scale = Vector2(6, 6)
 texture = ExtResource("11_spy7q")
 
-[node name="Cheese" type="Sprite2D" parent="." unique_id=628472333]
-position = Vector2(433, 436.00003)
-scale = Vector2(3, 3)
-texture = ExtResource("12_5nrr4")
+[node name="Main" parent="." unique_id=875315298 instance=ExtResource("3_gtid3")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 7300.0
+offset_bottom = 4067.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
+wait_time = 0.9
+
+[node name="Timer" type="Timer" parent="Main" unique_id=204439587]
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="Main/fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]

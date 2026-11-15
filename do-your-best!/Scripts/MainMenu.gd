@@ -2,6 +2,11 @@ extends Control
 
 var button_type = null
 
+func _ready() -> void:
+	$Main.show()
+	$Main/Timer.start()
+	$Main/AnimationPlayer.play("fade_in")
+
 func _on_start_pressed() -> void:
 	button_type = "start"
 	$Main.show()
@@ -15,3 +20,7 @@ func _on_fade_timer_timeout() -> void:
 	if button_type == "start":
 		get_tree().change_scene_to_file("res://Sisyphus.tscn")
 		button_type = null
+
+
+func _on_timer_timeout() -> void:
+	$Main.hide()

@@ -343,7 +343,7 @@ rotation = 1.4163737
 texture = ExtResource("3_00d75")
 
 [node name="Longpipe49" type="Sprite2D" parent="thepipening" unique_id=141665762]
-position = Vector2(2453.9998, 483)
+position = Vector2(2461, 483)
 rotation = 1.0859995
 texture = ExtResource("3_00d75")
 
@@ -361,8 +361,8 @@ script = ExtResource("3_378f1")
 shape = SubResource("CircleShape2D_5qk0w")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Ball" unique_id=516561575]
-modulate = Color(1, 0, 0, 1)
-self_modulate = Color(1, 0, 0, 1)
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(1, 1, 0, 1)
 position = Vector2(1.1444092e-05, 0)
 scale = Vector2(16.000021, 16.000029)
 mesh = SubResource("SphereMesh_0e48y")
@@ -520,3 +520,4 @@ mesh = SubResource("QuadMesh_4fad1")
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Main/Timer2" to="." method="_on_timer_2_timeout"]
