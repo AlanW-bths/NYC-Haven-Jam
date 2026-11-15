@@ -15,10 +15,9 @@ size = Vector2(2288, 16)
 [node name="Node2D" type="Node2D" unique_id=1121677183]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=676528423]
-position = Vector2(-32, 48)
+position = Vector2(8, 624)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2008870430]
-position = Vector2(4, -4)
 shape = SubResource("RectangleShape2D_5qk0w")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D/CollisionShape2D" unique_id=914085179]
@@ -28,6 +27,8 @@ scale = Vector2(7.9999995, 7.9999995)
 mesh = SubResource("QuadMesh_orrq1")
 texture = ExtResource("1_wtcfe")
 
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2110093978]
+
 [node name="Main Screen" type="Node2D" parent="." unique_id=353922581]
 
 [node name="Pause Menu" type="Node2D" parent="." unique_id=1751848864]
@@ -35,14 +36,26 @@ texture = ExtResource("1_wtcfe")
 [node name="Sisyphus" type="Node2D" parent="." unique_id=130366799]
 position = Vector2(-32, 48)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Sisyphus" unique_id=1452672495]
+[node name="Floor" type="RigidBody2D" parent="Sisyphus" unique_id=1452672495]
 position = Vector2(40, 592)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/RigidBody2D" unique_id=353800533]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Floor" unique_id=353800533]
 position = Vector2(1136, 0)
 shape = SubResource("RectangleShape2D_eaghv")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/RigidBody2D/CollisionShape2D" unique_id=306521913]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Floor/CollisionShape2D" unique_id=306521913]
+position = Vector2(-7.6293945e-05, -4.7683716e-07)
+scale = Vector2(2288, 15.999999)
+mesh = SubResource("QuadMesh_5qk0w")
+
+[node name="Floor2" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
+position = Vector2(40, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Floor2" unique_id=1666385820]
+position = Vector2(1136, 0)
+shape = SubResource("RectangleShape2D_eaghv")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Floor2/CollisionShape2D" unique_id=516561575]
 position = Vector2(-7.6293945e-05, -4.7683716e-07)
 scale = Vector2(2288, 15.999999)
 mesh = SubResource("QuadMesh_5qk0w")
