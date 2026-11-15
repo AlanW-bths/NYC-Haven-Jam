@@ -23,6 +23,8 @@ size = Vector2(2288, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orrq1"]
 size = Vector2(16, 816.85345)
 
+[sub_resource type="QuadMesh" id="QuadMesh_eaghv"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
 size = Vector2(8, 8)
 
@@ -59,30 +61,33 @@ collision_layer = 3
 shape = SubResource("RectangleShape2D_eaghv")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Floor" unique_id=306521913]
-modulate = Color(0.37111905, 0.37111905, 0.37111905, 1)
+modulate = Color(0.34901962, 0.3372549, 0.32156864, 1)
 position = Vector2(-0.00012207031, 0)
 scale = Vector2(2288, 15.999999)
-mesh = SubResource("QuadMesh_5qk0w")
-
-[node name="leftWall" type="StaticBody2D" parent="." unique_id=728353870]
-modulate = Color(0.44755095, 0.44755095, 0.44755095, 1)
-self_modulate = Color(0.40756536, 0.4075654, 0.40756524, 1)
-position = Vector2(-80, 557.5)
-rotation = -0.7853295
-collision_layer = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWall" unique_id=1009497456]
-position = Vector2(-3.0517578e-05, -288.42676)
-shape = SubResource("RectangleShape2D_orrq1")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="leftWall" unique_id=2024963478]
-position = Vector2(-5.684342e-14, -288.33435)
-scale = Vector2(15.999997, 816.66876)
 mesh = SubResource("QuadMesh_5qk0w")
 
 [node name="Map" type="StaticBody2D" parent="." unique_id=1579771505]
 position = Vector2(1750, 382)
 scale = Vector2(0.698, 0.5)
+
+[node name="leftWall" type="StaticBody2D" parent="Map" unique_id=728353870]
+modulate = Color(0.44755095, 0.44755095, 0.44755095, 1)
+self_modulate = Color(0.40756536, 0.4075654, 0.40756524, 1)
+position = Vector2(-2621.7766, 351)
+rotation = -0.9491279
+scale = Vector2(1.7395778, 1.7396547)
+skew = 0.3275894
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/leftWall" unique_id=1009497456]
+position = Vector2(-3.0517578e-05, -288.42676)
+shape = SubResource("RectangleShape2D_orrq1")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Map/leftWall" unique_id=1016204825]
+modulate = Color(0.7387843, 0.72630733, 0.7097028, 1)
+position = Vector2(0.038083855, -288.10492)
+scale = Vector2(16.12446, 817.5015)
+mesh = SubResource("QuadMesh_eaghv")
 
 [node name="Floor1" type="CollisionPolygon2D" parent="Map" unique_id=1520857355]
 polygon = PackedVector2Array(-2452.7222, 496, -2500, 500, -263.61035, 500, -267.90845, 368, -290.83105, 370, -372.49292, 98, -749.2838, 396, -948.4242, 408, -1527.2207, 362, -1604.5847, 392, -1598.854, 444, -1630.3726, 448, -1630.3726, 400, -1707.7366, 432, -1704.8711, 450, -1732.0918, 454, -1733.5244, 434, -1799.427, 458, -1852.4355, 460, -1958.4529, 438, -1949.8568, 466, -1984.2407, 470, -1991.404, 442, -2088.8252, 476, -2174.7852, 482, -2203.4385, 444, -2303.725, 486)
@@ -144,7 +149,7 @@ shape = SubResource("RectangleShape2D_5qk0w")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CollisionShape2D" unique_id=914085179]
 position = Vector2(2.3841858e-07, -2.3841858e-07)
 rotation = 3.1415927
-scale = Vector2(7.9999995, 7.9999995)
+scale = Vector2(-8, 8)
 mesh = SubResource("QuadMesh_orrq1")
 texture = ExtResource("2_arf4r")
 
@@ -163,6 +168,8 @@ text = "Exit"
 visible = false
 
 [node name="Timer" type="Timer" parent="Main" unique_id=209139117]
+
+[node name="Timer2" type="Timer" parent="Main" unique_id=1443768716]
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]

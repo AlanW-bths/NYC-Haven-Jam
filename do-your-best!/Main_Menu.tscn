@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://brpdhscj6i0xe" path="res://start_pressed.png" id="3_3mro0"]
 [ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="3_gtid3"]
 [ext_resource type="Texture2D" uid="uid://cyv5ymty836fu" path="res://start_default.png" id="4_tu7k8"]
+[ext_resource type="Texture2D" uid="uid://epfy7vb4jiv6" path="res://pipe.png" id="6_tu7k8"]
+[ext_resource type="Texture2D" uid="uid://7wmxc3oragyq" path="res://pipe_intersection.png" id="7_5cvai"]
 
 [node name="Main Menu" type="Control" unique_id=1987918872]
 layout_mode = 3
@@ -25,10 +27,10 @@ modulate = Color(0.9401983, 0.9401984, 0.9401983, 1)
 show_behind_parent = true
 texture_filter = 1
 layout_mode = 0
-offset_left = 32.0
-offset_top = 143.0
-offset_right = 346.0
-offset_bottom = 334.0
+offset_left = 53.0
+offset_top = 166.0
+offset_right = 367.0
+offset_bottom = 357.0
 texture_normal = ExtResource("2_257up")
 texture_pressed = ExtResource("3_3mro0")
 texture_hover = ExtResource("4_tu7k8")
@@ -36,10 +38,10 @@ stretch_mode = 5
 
 [node name="Quit" type="Button" parent="Button_Manager" unique_id=1179178811]
 layout_mode = 0
-offset_left = 99.0
-offset_top = 426.0
-offset_right = 466.0
-offset_bottom = 483.0
+offset_left = 49.0
+offset_top = 359.0
+offset_right = 416.0
+offset_bottom = 416.0
 text = "Quit
 "
 
@@ -58,6 +60,798 @@ grow_vertical = 1
 
 [node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
 wait_time = 0.9
+
+[node name="pipeline5" type="Node2D" parent="." unique_id=622394510]
+position = Vector2(944.99994, 922.99994)
+rotation = -2.2517533
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Pipe49" type="Sprite2D" parent="pipeline5" unique_id=1173812892]
+position = Vector2(-13, 254.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe50" type="Sprite2D" parent="pipeline5" unique_id=1364994918]
+position = Vector2(63, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe51" type="Sprite2D" parent="pipeline5" unique_id=1958535240]
+position = Vector2(139, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe52" type="Sprite2D" parent="pipeline5" unique_id=1231029748]
+position = Vector2(216.00002, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe53" type="Sprite2D" parent="pipeline5" unique_id=574011053]
+position = Vector2(288, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe54" type="Sprite2D" parent="pipeline5" unique_id=239169290]
+position = Vector2(368.00003, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe55" type="Sprite2D" parent="pipeline5" unique_id=886827788]
+position = Vector2(440, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe56" type="Sprite2D" parent="pipeline5" unique_id=532564146]
+position = Vector2(512, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe57" type="Sprite2D" parent="pipeline5" unique_id=195076229]
+position = Vector2(584, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe58" type="Sprite2D" parent="pipeline5" unique_id=1358878650]
+position = Vector2(656, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe59" type="Sprite2D" parent="pipeline5" unique_id=1292018046]
+position = Vector2(736, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe60" type="Sprite2D" parent="pipeline5" unique_id=505936833]
+position = Vector2(816.00006, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe61" type="Sprite2D" parent="pipeline5" unique_id=1646810210]
+position = Vector2(888, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe62" type="Sprite2D" parent="pipeline5" unique_id=681621428]
+position = Vector2(967, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe63" type="Sprite2D" parent="pipeline5" unique_id=969171902]
+position = Vector2(1047, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe64" type="Sprite2D" parent="pipeline5" unique_id=1298418668]
+position = Vector2(1119, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="PipeIntersection46" type="Sprite2D" parent="pipeline5" unique_id=1148281953]
+position = Vector2(39, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection47" type="Sprite2D" parent="pipeline5" unique_id=1612557117]
+position = Vector2(115.000015, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection48" type="Sprite2D" parent="pipeline5" unique_id=300421590]
+position = Vector2(190, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection49" type="Sprite2D" parent="pipeline5" unique_id=58639127]
+position = Vector2(264, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection50" type="Sprite2D" parent="pipeline5" unique_id=377914974]
+position = Vector2(345, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection51" type="Sprite2D" parent="pipeline5" unique_id=1621645296]
+position = Vector2(417, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection52" type="Sprite2D" parent="pipeline5" unique_id=1091294148]
+position = Vector2(488, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection53" type="Sprite2D" parent="pipeline5" unique_id=1122438426]
+position = Vector2(560, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection54" type="Sprite2D" parent="pipeline5" unique_id=1799908887]
+position = Vector2(632, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection55" type="Sprite2D" parent="pipeline5" unique_id=1093238113]
+position = Vector2(712, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection56" type="Sprite2D" parent="pipeline5" unique_id=106893690]
+position = Vector2(792.00006, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection57" type="Sprite2D" parent="pipeline5" unique_id=608442760]
+position = Vector2(864.00006, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection58" type="Sprite2D" parent="pipeline5" unique_id=2036611643]
+position = Vector2(944, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection59" type="Sprite2D" parent="pipeline5" unique_id=690081633]
+position = Vector2(1024.0001, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection60" type="Sprite2D" parent="pipeline5" unique_id=999026747]
+position = Vector2(1096.0001, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="pipeline4" type="Node2D" parent="." unique_id=1000509149]
+position = Vector2(1330.9999, -339)
+rotation = 1.5715512
+
+[node name="Pipe49" type="Sprite2D" parent="pipeline4" unique_id=867660960]
+position = Vector2(-13, 254.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe50" type="Sprite2D" parent="pipeline4" unique_id=8358070]
+position = Vector2(63, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe51" type="Sprite2D" parent="pipeline4" unique_id=1988674544]
+position = Vector2(139, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe52" type="Sprite2D" parent="pipeline4" unique_id=111267497]
+position = Vector2(216.00002, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe53" type="Sprite2D" parent="pipeline4" unique_id=1467064095]
+position = Vector2(288, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe54" type="Sprite2D" parent="pipeline4" unique_id=1979931423]
+position = Vector2(368.00003, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe55" type="Sprite2D" parent="pipeline4" unique_id=381132083]
+position = Vector2(440, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe56" type="Sprite2D" parent="pipeline4" unique_id=652423975]
+position = Vector2(512, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe57" type="Sprite2D" parent="pipeline4" unique_id=1889146219]
+position = Vector2(584, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe58" type="Sprite2D" parent="pipeline4" unique_id=1274752885]
+position = Vector2(656, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe59" type="Sprite2D" parent="pipeline4" unique_id=202431490]
+position = Vector2(736, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe60" type="Sprite2D" parent="pipeline4" unique_id=2020180435]
+position = Vector2(816.00006, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe61" type="Sprite2D" parent="pipeline4" unique_id=1894870149]
+position = Vector2(888, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe62" type="Sprite2D" parent="pipeline4" unique_id=1833908877]
+position = Vector2(967, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe63" type="Sprite2D" parent="pipeline4" unique_id=180161859]
+position = Vector2(1047, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe64" type="Sprite2D" parent="pipeline4" unique_id=182725259]
+position = Vector2(1119, 253.99985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="PipeIntersection46" type="Sprite2D" parent="pipeline4" unique_id=1583808939]
+position = Vector2(39, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection47" type="Sprite2D" parent="pipeline4" unique_id=1589376766]
+position = Vector2(115.000015, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection48" type="Sprite2D" parent="pipeline4" unique_id=768365286]
+position = Vector2(190, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection49" type="Sprite2D" parent="pipeline4" unique_id=1443504433]
+position = Vector2(264, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection50" type="Sprite2D" parent="pipeline4" unique_id=968713563]
+position = Vector2(345, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection51" type="Sprite2D" parent="pipeline4" unique_id=793439657]
+position = Vector2(417, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection52" type="Sprite2D" parent="pipeline4" unique_id=140736507]
+position = Vector2(488, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection53" type="Sprite2D" parent="pipeline4" unique_id=423383208]
+position = Vector2(560, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection54" type="Sprite2D" parent="pipeline4" unique_id=670556542]
+position = Vector2(632, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection55" type="Sprite2D" parent="pipeline4" unique_id=230939748]
+position = Vector2(712, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection56" type="Sprite2D" parent="pipeline4" unique_id=960029138]
+position = Vector2(792.00006, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection57" type="Sprite2D" parent="pipeline4" unique_id=439354016]
+position = Vector2(864.00006, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection58" type="Sprite2D" parent="pipeline4" unique_id=2076547427]
+position = Vector2(944, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection59" type="Sprite2D" parent="pipeline4" unique_id=94643951]
+position = Vector2(1024.0001, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection60" type="Sprite2D" parent="pipeline4" unique_id=1226666998]
+position = Vector2(1096.0001, 253.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="pipeline" type="Node2D" parent="." unique_id=499675513]
+
+[node name="Pipe" type="Sprite2D" parent="pipeline" unique_id=1886966379]
+position = Vector2(24, 95)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe2" type="Sprite2D" parent="pipeline" unique_id=751305092]
+position = Vector2(100, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe3" type="Sprite2D" parent="pipeline" unique_id=1816446613]
+position = Vector2(176, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe4" type="Sprite2D" parent="pipeline" unique_id=1161858219]
+position = Vector2(253.00002, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe5" type="Sprite2D" parent="pipeline" unique_id=801188762]
+position = Vector2(325, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe6" type="Sprite2D" parent="pipeline" unique_id=1713997643]
+position = Vector2(405.00003, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe7" type="Sprite2D" parent="pipeline" unique_id=1012482945]
+position = Vector2(477, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe8" type="Sprite2D" parent="pipeline" unique_id=176599121]
+position = Vector2(549, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe9" type="Sprite2D" parent="pipeline" unique_id=1428914158]
+position = Vector2(621, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe10" type="Sprite2D" parent="pipeline" unique_id=674557212]
+position = Vector2(693, 94)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe11" type="Sprite2D" parent="pipeline" unique_id=1141310675]
+position = Vector2(773, 93.99999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe12" type="Sprite2D" parent="pipeline" unique_id=1079163577]
+position = Vector2(853.00006, 93.999985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe13" type="Sprite2D" parent="pipeline" unique_id=1068361425]
+position = Vector2(925, 93.999985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe14" type="Sprite2D" parent="pipeline" unique_id=417089269]
+position = Vector2(1004, 93.999985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe15" type="Sprite2D" parent="pipeline" unique_id=1322528438]
+position = Vector2(1084, 93.999985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe16" type="Sprite2D" parent="pipeline" unique_id=1595858310]
+position = Vector2(1156, 93.999985)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="PipeIntersection" type="Sprite2D" parent="pipeline" unique_id=2002684184]
+position = Vector2(76, 94.00001)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection2" type="Sprite2D" parent="pipeline" unique_id=1736188378]
+position = Vector2(152.00002, 94.00001)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection3" type="Sprite2D" parent="pipeline" unique_id=1226642079]
+position = Vector2(227, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection4" type="Sprite2D" parent="pipeline" unique_id=1635051689]
+position = Vector2(301, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection5" type="Sprite2D" parent="pipeline" unique_id=210082197]
+position = Vector2(382, 94.00001)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection6" type="Sprite2D" parent="pipeline" unique_id=465022660]
+position = Vector2(454, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection7" type="Sprite2D" parent="pipeline" unique_id=1855411150]
+position = Vector2(525, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection8" type="Sprite2D" parent="pipeline" unique_id=1148477258]
+position = Vector2(597, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection9" type="Sprite2D" parent="pipeline" unique_id=2045264795]
+position = Vector2(669, 94.00001)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection10" type="Sprite2D" parent="pipeline" unique_id=434023427]
+position = Vector2(749, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection11" type="Sprite2D" parent="pipeline" unique_id=1908270874]
+position = Vector2(829.00006, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection12" type="Sprite2D" parent="pipeline" unique_id=443388996]
+position = Vector2(901.00006, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection13" type="Sprite2D" parent="pipeline" unique_id=790263675]
+position = Vector2(981, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection14" type="Sprite2D" parent="pipeline" unique_id=114703104]
+position = Vector2(1061.0001, 94.00001)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection15" type="Sprite2D" parent="pipeline" unique_id=1951620778]
+position = Vector2(1133.0001, 94)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="pipeline2" type="Node2D" parent="." unique_id=840475814]
+position = Vector2(-30, 4)
+
+[node name="Pipe17" type="Sprite2D" parent="pipeline2" unique_id=1164808873]
+position = Vector2(24, 615)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe18" type="Sprite2D" parent="pipeline2" unique_id=1109045901]
+position = Vector2(100, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe19" type="Sprite2D" parent="pipeline2" unique_id=974927740]
+position = Vector2(176, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe20" type="Sprite2D" parent="pipeline2" unique_id=1615851451]
+position = Vector2(253.00002, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe21" type="Sprite2D" parent="pipeline2" unique_id=199336806]
+position = Vector2(325, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe22" type="Sprite2D" parent="pipeline2" unique_id=199097558]
+position = Vector2(405.00003, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe23" type="Sprite2D" parent="pipeline2" unique_id=363240629]
+position = Vector2(477, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe24" type="Sprite2D" parent="pipeline2" unique_id=1992926476]
+position = Vector2(549, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe25" type="Sprite2D" parent="pipeline2" unique_id=576654379]
+position = Vector2(621, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe26" type="Sprite2D" parent="pipeline2" unique_id=148390816]
+position = Vector2(693, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe27" type="Sprite2D" parent="pipeline2" unique_id=61450720]
+position = Vector2(773, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe28" type="Sprite2D" parent="pipeline2" unique_id=2035059585]
+position = Vector2(853.00006, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe29" type="Sprite2D" parent="pipeline2" unique_id=2143959236]
+position = Vector2(925, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe30" type="Sprite2D" parent="pipeline2" unique_id=1660287064]
+position = Vector2(1004, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe31" type="Sprite2D" parent="pipeline2" unique_id=2101254883]
+position = Vector2(1084, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe32" type="Sprite2D" parent="pipeline2" unique_id=927451358]
+position = Vector2(1156, 614)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="PipeIntersection16" type="Sprite2D" parent="pipeline2" unique_id=1013282959]
+position = Vector2(76, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection17" type="Sprite2D" parent="pipeline2" unique_id=1459195762]
+position = Vector2(152.00002, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection18" type="Sprite2D" parent="pipeline2" unique_id=534276957]
+position = Vector2(227, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection19" type="Sprite2D" parent="pipeline2" unique_id=235420302]
+position = Vector2(301, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection20" type="Sprite2D" parent="pipeline2" unique_id=1214479541]
+position = Vector2(382, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection21" type="Sprite2D" parent="pipeline2" unique_id=622627665]
+position = Vector2(454, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection22" type="Sprite2D" parent="pipeline2" unique_id=510428632]
+position = Vector2(525, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection23" type="Sprite2D" parent="pipeline2" unique_id=2064196964]
+position = Vector2(597, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection24" type="Sprite2D" parent="pipeline2" unique_id=426693852]
+position = Vector2(669, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection25" type="Sprite2D" parent="pipeline2" unique_id=1277580115]
+position = Vector2(749, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection26" type="Sprite2D" parent="pipeline2" unique_id=1729285611]
+position = Vector2(829.00006, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection27" type="Sprite2D" parent="pipeline2" unique_id=1360728997]
+position = Vector2(901.00006, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection28" type="Sprite2D" parent="pipeline2" unique_id=668793483]
+position = Vector2(981, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection29" type="Sprite2D" parent="pipeline2" unique_id=1354244427]
+position = Vector2(1061.0001, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection30" type="Sprite2D" parent="pipeline2" unique_id=1305789291]
+position = Vector2(1133.0001, 613.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="pipeline3" type="Node2D" parent="." unique_id=1480669725]
+position = Vector2(37, -56)
+
+[node name="Pipe33" type="Sprite2D" parent="pipeline3" unique_id=2088910180]
+position = Vector2(-13, 558.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe34" type="Sprite2D" parent="pipeline3" unique_id=277463213]
+position = Vector2(63, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe35" type="Sprite2D" parent="pipeline3" unique_id=969646621]
+position = Vector2(139, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe36" type="Sprite2D" parent="pipeline3" unique_id=1756227609]
+position = Vector2(216.00002, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe37" type="Sprite2D" parent="pipeline3" unique_id=1864205421]
+position = Vector2(288, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe38" type="Sprite2D" parent="pipeline3" unique_id=219679773]
+position = Vector2(368.00003, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe39" type="Sprite2D" parent="pipeline3" unique_id=1589987473]
+position = Vector2(440, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe40" type="Sprite2D" parent="pipeline3" unique_id=1698926532]
+position = Vector2(512, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe41" type="Sprite2D" parent="pipeline3" unique_id=2042253478]
+position = Vector2(584, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe42" type="Sprite2D" parent="pipeline3" unique_id=1179737417]
+position = Vector2(656, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe43" type="Sprite2D" parent="pipeline3" unique_id=89659871]
+position = Vector2(736, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe44" type="Sprite2D" parent="pipeline3" unique_id=1661906206]
+position = Vector2(816.00006, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe45" type="Sprite2D" parent="pipeline3" unique_id=1476840191]
+position = Vector2(888, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe46" type="Sprite2D" parent="pipeline3" unique_id=1584734684]
+position = Vector2(967, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe47" type="Sprite2D" parent="pipeline3" unique_id=767584181]
+position = Vector2(1047, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="Pipe48" type="Sprite2D" parent="pipeline3" unique_id=1677432128]
+position = Vector2(1119, 557.9999)
+scale = Vector2(3, 3)
+texture = ExtResource("6_tu7k8")
+
+[node name="PipeIntersection31" type="Sprite2D" parent="pipeline3" unique_id=521128983]
+position = Vector2(39, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection32" type="Sprite2D" parent="pipeline3" unique_id=1143944220]
+position = Vector2(115.000015, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection33" type="Sprite2D" parent="pipeline3" unique_id=703205638]
+position = Vector2(190, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection34" type="Sprite2D" parent="pipeline3" unique_id=1777262558]
+position = Vector2(264, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection35" type="Sprite2D" parent="pipeline3" unique_id=1874981016]
+position = Vector2(345, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection36" type="Sprite2D" parent="pipeline3" unique_id=536588226]
+position = Vector2(417, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection37" type="Sprite2D" parent="pipeline3" unique_id=1455288142]
+position = Vector2(488, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection38" type="Sprite2D" parent="pipeline3" unique_id=1563130503]
+position = Vector2(560, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection39" type="Sprite2D" parent="pipeline3" unique_id=1656807936]
+position = Vector2(632, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection40" type="Sprite2D" parent="pipeline3" unique_id=633009480]
+position = Vector2(712, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection41" type="Sprite2D" parent="pipeline3" unique_id=915847265]
+position = Vector2(792.00006, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection42" type="Sprite2D" parent="pipeline3" unique_id=1021866206]
+position = Vector2(864.00006, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection43" type="Sprite2D" parent="pipeline3" unique_id=1903318780]
+position = Vector2(944, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection44" type="Sprite2D" parent="pipeline3" unique_id=1425009720]
+position = Vector2(1024.0001, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
+
+[node name="PipeIntersection45" type="Sprite2D" parent="pipeline3" unique_id=2077246199]
+position = Vector2(1096.0001, 557.99994)
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("7_5cvai")
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]

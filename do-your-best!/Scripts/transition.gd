@@ -4,6 +4,7 @@ var button_type = null
 
 func _ready() -> void:
 	$Main.show()
+	$Main/Timer2.start()
 	$Main/AnimationPlayer.play("fade_in")
 	$Main.hide()
 
