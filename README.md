@@ -1,1 +1,3 @@
 # NYC-Haven-Jam
+
+Ideas:
