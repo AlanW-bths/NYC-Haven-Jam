@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://Assets/sisyphus_map.png" id="3_arf4r"]
 [ext_resource type="Texture2D" uid="uid://8ls6im6axylh" path="res://Assets/squouse-1.png.png" id="5_un3nu"]
 [ext_resource type="Texture2D" uid="uid://b7kca460h1gck" path="res://Assets/longerpipe.png" id="7_ovgts"]
+[ext_resource type="Texture2D" uid="uid://lt31h4pl83lk" path="res://Assets/Silly guy.png" id="9_mc2ep"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -41,6 +42,28 @@ size = Vector2(8, 8)
 size = Vector2(18.478004, 2)
 
 [sub_resource type="QuadMesh" id="QuadMesh_4fad1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kptn"]
+atlas = ExtResource("9_mc2ep")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl61v"]
+atlas = ExtResource("9_mc2ep")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpjif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kptn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kl61v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1121677183]
 script = ExtResource("1_un3nu")
@@ -517,6 +540,12 @@ modulate = Color(1, 0, 0, 1)
 position = Vector2(-0.76089764, 0)
 scale = Vector2(18.478205, 2)
 mesh = SubResource("QuadMesh_4fad1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2106374586]
+position = Vector2(3503, 478)
+scale = Vector2(0.4843769, 0.4843769)
+sprite_frames = SubResource("SpriteFrames_vpjif")
+frame_progress = 0.6791404
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
