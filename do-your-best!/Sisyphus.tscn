@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://PlayerMovement.gd" id="1_0c5gw"]
 [ext_resource type="Texture2D" uid="uid://cg7iwahgbk6fs" path="res://icon.svg" id="2_arf4r"]
+[ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://sisyphus_map.png" id="3_arf4r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
 size = Vector2(8, 8)
@@ -27,7 +28,7 @@ size = Vector2(16, 240)
 [node name="Node2D" type="Node2D" unique_id=1121677183]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
-position = Vector2(8, 624)
+position = Vector2(32, 624)
 collision_layer = 3
 floor_stop_on_slope = false
 script = ExtResource("1_0c5gw")
@@ -50,7 +51,7 @@ zoom = Vector2(4, 4)
 position = Vector2(-32, 48)
 
 [node name="Ball" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
-position = Vector2(72, 576)
+position = Vector2(48, 576)
 collision_layer = 3
 collision_priority = 2.0
 mass = 0.02
@@ -94,3 +95,55 @@ shape = SubResource("RectangleShape2D_orrq1")
 position = Vector2(-5.684342e-14, -5.9604645e-08)
 scale = Vector2(15.999997, 239.99997)
 mesh = SubResource("QuadMesh_5qk0w")
+
+[node name="Map" type="StaticBody2D" parent="Sisyphus" unique_id=1579771505]
+position = Vector2(1744.0001, 336)
+scale = Vector2(0.698, 0.5)
+
+[node name="SisyphusMap" type="Sprite2D" parent="Sisyphus/Map" unique_id=1618745220]
+texture = ExtResource("3_arf4r")
+
+[node name="Floor1" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1520857355]
+polygon = PackedVector2Array(-2452.7222, 496, -2500, 500, -263.61035, 500, -267.90845, 368, -290.83105, 370, -372.49292, 98, -749.2838, 396, -948.4242, 408, -1527.2207, 362, -1604.5847, 392, -1598.854, 444, -1630.3726, 448, -1630.3726, 400, -1707.7366, 432, -1704.8711, 450, -1732.0918, 454, -1733.5244, 434, -1799.427, 458, -1852.4355, 460, -1958.4529, 438, -1949.8568, 466, -1984.2407, 470, -1991.404, 442, -2088.8252, 476, -2174.7852, 482, -2203.4385, 444, -2303.725, 486)
+
+[node name="Floor2" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=187125782]
+polygon = PackedVector2Array(-127.507324, 360, -127.507324, 496, 2500, 498, 2500, 214, 2388.252, 214, 2388.252, 212, 2176.2178, 224, 2163.3237, 160, 2038.6816, 232, 1991.4038, 234, 1977.0771, 186, 1845.272, 244, 1769.3408, 248, 1732.0918, 186, 1588.8252, 258, 1517.1919, 264, 1136.103, 122, 893.98267, 298)
+
+[node name="Island1" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=667056994]
+polygon = PackedVector2Array(-1406.877, 328, -921.2035, 284, -916.9055, 162)
+
+[node name="Island2" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1346468821]
+polygon = PackedVector2Array(-863.897, 158, -518.62476, 14, -872.4929, 220)
+
+[node name="Island3" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1435610903]
+polygon = PackedVector2Array(-335.24365, 92, -328.08032, 114, -191.9773, 80, -202.00586, 54)
+
+[node name="Island4" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=746933591]
+polygon = PackedVector2Array(-123.20923, 66, 65.90259, 116, 60.171875, 144, -133.23804, 108)
+
+[node name="Island5" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1720960842]
+polygon = PackedVector2Array(-181.94849, 242, -50.14331, 214, -65.90259, 170)
+
+[node name="Island6" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=128985066]
+polygon = PackedVector2Array(48.71045, 258, 138.96826, 268, 203.43823, 242, 177.65039, 216, 150.42969, 172)
+
+[node name="Island7" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=648608659]
+polygon = PackedVector2Array(121.77637, 124, 257.87964, 82, 266.4756, 100, 124.6416, 138)
+
+[node name="Island8" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1977940836]
+polygon = PackedVector2Array(260.74487, 270, 514.3264, 174, 468.4812, 244)
+
+[node name="Island9" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=157144451]
+polygon = PackedVector2Array(348.13745, 88, 482.80786, 88, 482.80786, 110, 348.13745, 110)
+
+[node name="Island10" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1372283868]
+polygon = PackedVector2Array(534.3838, 118, 756.4468, 168, 587.39233, 188)
+
+[node name="Island11" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=1997907201]
+polygon = PackedVector2Array(666.18896, 242, 858.166, 182, 925.5012, 170, 869.62744, 236)
+
+[node name="Island12" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=345983081]
+polygon = PackedVector2Array(815.18604, 152, 982.80786, 86, 1088.8252, 70)
+
+[node name="Rectangle" type="CollisionPolygon2D" parent="Sisyphus/Map" unique_id=100810552]
+polygon = PackedVector2Array(2388.252, 168, 2500, 168, 2500, 178, 2388.252, 178)
