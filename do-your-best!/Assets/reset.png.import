@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pkl422fopq2v"
-path="res://.godot/imported/sisyphus_map.png-c7cb7dca336f2e9ad1bd5113f2f986b3.ctex"
+uid="uid://bo7fj0upn6u7i"
+path="res://.godot/imported/reset.png-a5a8333b3cd7c462ce6f2109fbf9032d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sisyphus_map.png"
-dest_files=["res://.godot/imported/sisyphus_map.png-c7cb7dca336f2e9ad1bd5113f2f986b3.ctex"]
+source_file="res://Assets/reset.png"
+dest_files=["res://.godot/imported/reset.png-a5a8333b3cd7c462ce6f2109fbf9032d.ctex"]
 
 [params]
 

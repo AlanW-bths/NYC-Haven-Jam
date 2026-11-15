@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo7fj0upn6u7i"
-path="res://.godot/imported/reset.png-dd347eefdf4e0936cf383107c70f5f6e.ctex"
+uid="uid://ca22j8pwukdib"
+path="res://.godot/imported/sewer.png-4aba565c8b81a5d5004f2cd1de4aacad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://reset.png"
-dest_files=["res://.godot/imported/reset.png-dd347eefdf4e0936cf383107c70f5f6e.ctex"]
+source_file="res://Assets/sewer.png"
+dest_files=["res://.godot/imported/sewer.png-4aba565c8b81a5d5004f2cd1de4aacad.ctex"]
 
 [params]
 

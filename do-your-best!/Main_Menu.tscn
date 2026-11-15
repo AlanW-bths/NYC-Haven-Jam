@@ -1,5 +1,60 @@
 [gd_scene format=3 uid="uid://bxg41gwnj4bw3"]
 
-[node name="MarginContainer" type="MarginContainer" unique_id=1342495724]
+[ext_resource type="Script" uid="uid://cc7ku7bkv0gcb" path="res://Scripts/MainMenu.gd" id="1_m625n"]
+[ext_resource type="Texture2D" uid="uid://b3i5daiaik1yj" path="res://Assets/start.png" id="2_wugcc"]
+[ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="3_gtid3"]
+
+[node name="Main Menu" type="Control" unique_id=1987918872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m625n")
+
+[node name="Button_Manager" type="Control" parent="." unique_id=1936351234]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="Button_Manager" unique_id=233391307]
+modulate = Color(0.9401983, 0.9401984, 0.9401983, 1)
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 0
+offset_left = 32.0
+offset_top = 143.0
+offset_right = 346.0
+offset_bottom = 334.0
+texture_normal = ExtResource("2_wugcc")
+stretch_mode = 5
+
+[node name="Quit" type="Button" parent="Button_Manager" unique_id=1179178811]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 426.0
+offset_right = 466.0
+offset_bottom = 483.0
+text = "Quit
+"
+
+[node name="Main" parent="." unique_id=875315298 instance=ExtResource("3_gtid3")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 7300.0
+offset_bottom = 4067.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
+wait_time = 0.9
+
+[connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Main/fade_timer" to="." method="_on_fade_timer_timeout"]

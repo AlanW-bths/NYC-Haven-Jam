@@ -1,14 +1,11 @@
 [gd_scene format=3 uid="uid://jkyyrlob8575"]
 
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://Scripts/PlayerMovement.gd" id="1_0c5gw"]
+[ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="1_fhhho"]
+[ext_resource type="Script" uid="uid://dhvqvxh631yri" path="res://Scripts/transition.gd" id="1_un3nu"]
 [ext_resource type="Texture2D" uid="uid://cg7iwahgbk6fs" path="res://icon.svg" id="2_arf4r"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
-[ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://sisyphus_map.png" id="3_arf4r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
-size = Vector2(8, 8)
-
-[sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
+[ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://Assets/sisyphus_map.png" id="3_arf4r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -26,27 +23,13 @@ size = Vector2(2288, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orrq1"]
 size = Vector2(16, 816.85345)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
+size = Vector2(8, 8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
+
 [node name="Node2D" type="Node2D" unique_id=1121677183]
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
-position = Vector2(10, 624)
-collision_layer = 3
-floor_stop_on_slope = false
-script = ExtResource("1_0c5gw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2008870430]
-shape = SubResource("RectangleShape2D_5qk0w")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CollisionShape2D" unique_id=914085179]
-position = Vector2(2.3841858e-07, -2.3841858e-07)
-rotation = 3.1415927
-scale = Vector2(7.9999995, 7.9999995)
-mesh = SubResource("QuadMesh_orrq1")
-texture = ExtResource("2_arf4r")
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2110093978]
-scale = Vector2(-2.720001, 1)
-zoom = Vector2(4, 4)
+script = ExtResource("1_un3nu")
 
 [node name="Ball" type="RigidBody2D" parent="." unique_id=1400348022]
 position = Vector2(27, 622)
@@ -148,3 +131,38 @@ polygon = PackedVector2Array(2388.252, 168, 2500, 168, 2500, 178, 2388.252, 178)
 
 [node name="SisyphusMap" type="Sprite2D" parent="Map" unique_id=1618745220]
 texture = ExtResource("3_arf4r")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
+position = Vector2(10, 624)
+collision_layer = 3
+floor_stop_on_slope = false
+script = ExtResource("1_0c5gw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2008870430]
+shape = SubResource("RectangleShape2D_5qk0w")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CollisionShape2D" unique_id=914085179]
+position = Vector2(2.3841858e-07, -2.3841858e-07)
+rotation = 3.1415927
+scale = Vector2(7.9999995, 7.9999995)
+mesh = SubResource("QuadMesh_orrq1")
+texture = ExtResource("2_arf4r")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2110093978]
+scale = Vector2(-2.720001, 1)
+zoom = Vector2(4, 4)
+
+[node name="exit" type="Button" parent="Player" unique_id=1037597732]
+offset_left = -144.0
+offset_top = -81.0
+offset_right = -107.0
+offset_bottom = -50.0
+text = "Exit"
+
+[node name="Main" parent="." unique_id=875315298 instance=ExtResource("1_fhhho")]
+visible = false
+
+[node name="Timer" type="Timer" parent="Main" unique_id=209139117]
+
+[connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]

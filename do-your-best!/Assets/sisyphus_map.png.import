@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cossvs1il0ye5"
-path="res://.godot/imported/wall_background.png-e0815160af83d41724c4ec801b7e6b3b.ctex"
+uid="uid://pkl422fopq2v"
+path="res://.godot/imported/sisyphus_map.png-f5c46568667565586e457182b4f4c75a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wall_background.png"
-dest_files=["res://.godot/imported/wall_background.png-e0815160af83d41724c4ec801b7e6b3b.ctex"]
+source_file="res://Assets/sisyphus_map.png"
+dest_files=["res://.godot/imported/sisyphus_map.png-f5c46568667565586e457182b4f4c75a.ctex"]
 
 [params]
 
