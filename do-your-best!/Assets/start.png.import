@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3i5daiaik1yj"
-<<<<<<<< HEAD:do-your-best!/Assets/start.png.import
+uid="uid://c0dhtxdd0yxr8"
 path="res://.godot/imported/start.png-aec87fdb06c416de1966abd728121a36.ctex"
-========
-path="res://.godot/imported/start_hover.png-8c44c21bf58bb934f2f1144663763cbb.ctex"
->>>>>>>> 6c26cfaf6779b306a1286e21bbdb0e8cd4f5babf:do-your-best!/start_hover.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:do-your-best!/Assets/start.png.import
 source_file="res://Assets/start.png"
 dest_files=["res://.godot/imported/start.png-aec87fdb06c416de1966abd728121a36.ctex"]
-========
-source_file="res://start_hover.png"
-dest_files=["res://.godot/imported/start_hover.png-8c44c21bf58bb934f2f1144663763cbb.ctex"]
->>>>>>>> 6c26cfaf6779b306a1286e21bbdb0e8cd4f5babf:do-your-best!/start_hover.png.import
 
 [params]
 
