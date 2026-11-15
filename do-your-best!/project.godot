@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Do Your Best!"
-run/main_scene="uid://bxg41gwnj4bw3"
+run/main_scene="uid://jkyyrlob8575"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

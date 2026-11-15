@@ -1,15 +1,5 @@
 [gd_scene format=3 uid="uid://bxg41gwnj4bw3"]
 
-[node name="Control" type="Control" unique_id=705782161]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Container" type="Container" parent="." unique_id=1233438900]
-layout_mode = 0
-offset_right = 996.9231
-offset_bottom = 80.99977
-scale = Vector2(1.1555555, 8.000022)
+[node name="MarginContainer" type="MarginContainer" unique_id=1342495724]
+offset_right = 40.0
+offset_bottom = 40.0
