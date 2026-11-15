@@ -47,9 +47,9 @@ position = Vector2(-32, 48)
 
 [node name="Ball" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
 position = Vector2(72, 568)
-collision_layer = 2
+collision_layer = 3
 collision_priority = 2.0
-mass = 0.014
+mass = 0.025
 contact_monitor = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Ball" unique_id=1666385820]
@@ -77,7 +77,8 @@ mesh = SubResource("QuadMesh_5qk0w")
 [node name="leftWall" type="StaticBody2D" parent="Sisyphus" unique_id=728353870]
 modulate = Color(0.44755095, 0.44755095, 0.44755095, 1)
 self_modulate = Color(0.40756536, 0.4075654, 0.40756524, 1)
-position = Vector2(24, 464)
+position = Vector2(-48, 509.5)
+rotation = -0.7853295
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/leftWall" unique_id=1009497456]

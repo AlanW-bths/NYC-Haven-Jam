@@ -3,9 +3,10 @@ extends CharacterBody2D
 
 var speed = 75.0
 var sprint_speed = 150.0
-var acceleration = 400.0
-var deceleration = 300.0
+var acceleration = 200.0
+var deceleration = 150.0
 var jump_velocity = -200.0
+var force = 80.0
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
@@ -26,4 +27,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		#Decelerate
 		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
+	if move_and_slide(): # true if collided
+		for i in get_slide_collision_count():
+			var col = get_slide_collision(i)
+			if col.get_collider() is RigidBody2D:
+				col.get_collider().apply_force(col.get_normal() * -force)
 	move_and_slide()
