@@ -4,7 +4,7 @@ var button_type = null
 
 func _ready() -> void:
 	$Main.show()
-	$Main/Timer.start()
+	$Main/Timer2.start()
 	$Main/AnimationPlayer.play("fade_in")
 
 func _on_start_pressed() -> void:
@@ -21,6 +21,5 @@ func _on_fade_timer_timeout() -> void:
 		get_tree().change_scene_to_file("res://Sisyphus.tscn")
 		button_type = null
 
-
-func _on_timer_timeout() -> void:
+func _on_timer_2_timeout() -> void:
 	$Main.hide()

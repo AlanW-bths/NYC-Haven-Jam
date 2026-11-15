@@ -866,9 +866,9 @@ grow_vertical = 1
 [node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
 wait_time = 0.9
 
-[node name="Timer" type="Timer" parent="Main" unique_id=204439587]
+[node name="Timer2" type="Timer" parent="Main" unique_id=204439587]
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
 [connection signal="timeout" from="Main/fade_timer" to="." method="_on_fade_timer_timeout"]
-[connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Main/Timer2" to="." method="_on_timer_2_timeout"]
