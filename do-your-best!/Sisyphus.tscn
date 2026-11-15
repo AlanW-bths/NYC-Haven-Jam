@@ -583,18 +583,19 @@ position = Vector2(3503, 478)
 scale = Vector2(0.4843769, 0.4843769)
 sprite_frames = SubResource("SpriteFrames_vpjif")
 autoplay = "default"
-frame_progress = 0.76640594
+frame_progress = 0.5903235
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1631399651]
 position = Vector2(3473.8225, 455.2405)
 scale = Vector2(0.6360922, 0.6079482)
 sprite_frames = SubResource("SpriteFrames_fb8vc")
 autoplay = "default"
-frame_progress = 0.9352274
+frame_progress = 0.759147
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1070266230]
 stream = ExtResource("17_jtv0r")
 autoplay = true
+playback_type = 1
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
