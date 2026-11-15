@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c4s7bp48ylxj1"]
+
+[ext_resource type="Texture2D" uid="uid://cossvs1il0ye5" path="res://wall_background.png" id="1_t6g64"]
+[ext_resource type="Texture2D" uid="uid://dh0mrenfo52wo" path="res://Plug.png" id="2_51mix"]
+[ext_resource type="Texture2D" uid="uid://dfcmy5hcyyyi0" path="res://outlet.png" id="3_0crwt"]
+[ext_resource type="Texture2D" uid="uid://u1h2ln0dqsir" path="res://water.png" id="4_bj7c2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujc36"]
+atlas = ExtResource("2_51mix")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04xrj"]
+atlas = ExtResource("2_51mix")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fb8vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujc36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04xrj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vewy5"]
+atlas = ExtResource("3_0crwt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jmnt"]
+atlas = ExtResource("3_0crwt")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gn28m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vewy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jmnt")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s37b6"]
+atlas = ExtResource("4_bj7c2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81753"]
+atlas = ExtResource("4_bj7c2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qg7r7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s37b6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81753")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=585765513]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=121264144]
+z_index = -1
+offset_right = 270.0
+offset_bottom = 193.0
+texture = ExtResource("1_t6g64")
+
+[node name="plug" type="AnimatedSprite2D" parent="." unique_id=1568256807]
+z_index = 1
+position = Vector2(32, 123)
+sprite_frames = SubResource("SpriteFrames_fb8vc")
+frame_progress = 0.7919959
+
+[node name="outlet" type="AnimatedSprite2D" parent="." unique_id=1248413546]
+position = Vector2(206, 117)
+sprite_frames = SubResource("SpriteFrames_gn28m")
+frame_progress = 0.93622017
+
+[node name="water" type="AnimatedSprite2D" parent="." unique_id=675120205]
+position = Vector2(246, 154)
+sprite_frames = SubResource("SpriteFrames_qg7r7")
+frame_progress = 0.8281267
