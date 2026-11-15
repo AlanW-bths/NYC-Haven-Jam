@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ojmqkvk4wpie"]
 
+[ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://PlayerMovement.gd" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://cg7iwahgbk6fs" path="res://icon.svg" id="1_wtcfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
@@ -7,55 +8,82 @@ size = Vector2(8, 8)
 
 [sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5qk0w"]
+radius = 8.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_0e48y"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaghv"]
 size = Vector2(2288, 16)
 
 [sub_resource type="QuadMesh" id="QuadMesh_5qk0w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orrq1"]
+size = Vector2(16, 240)
+
 [node name="Node2D" type="Node2D" unique_id=1121677183]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=676528423]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
 position = Vector2(8, 624)
+collision_layer = 3
+script = ExtResource("1_0e48y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2008870430]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2008870430]
 shape = SubResource("RectangleShape2D_5qk0w")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D/CollisionShape2D" unique_id=914085179]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CollisionShape2D" unique_id=914085179]
 position = Vector2(2.3841858e-07, -2.3841858e-07)
 rotation = 3.1415927
 scale = Vector2(7.9999995, 7.9999995)
 mesh = SubResource("QuadMesh_orrq1")
 texture = ExtResource("1_wtcfe")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=2110093978]
-
-[node name="Main Screen" type="Node2D" parent="." unique_id=353922581]
-
-[node name="Pause Menu" type="Node2D" parent="." unique_id=1751848864]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2110093978]
+scale = Vector2(-2.720001, 1)
+zoom = Vector2(4, 4)
 
 [node name="Sisyphus" type="Node2D" parent="." unique_id=130366799]
 position = Vector2(-32, 48)
 
-[node name="Floor" type="RigidBody2D" parent="Sisyphus" unique_id=1452672495]
-position = Vector2(40, 592)
+[node name="Ball" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
+position = Vector2(72, 568)
+collision_layer = 2
+collision_priority = 2.0
+mass = 0.014
+contact_monitor = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Ball" unique_id=1666385820]
+shape = SubResource("CircleShape2D_5qk0w")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Ball" unique_id=516561575]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(1.1444092e-05, 0)
+scale = Vector2(16.000021, 16.000029)
+mesh = SubResource("SphereMesh_0e48y")
+
+[node name="Floor" type="StaticBody2D" parent="Sisyphus" unique_id=1333197645]
+position = Vector2(1176, 592)
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Floor" unique_id=353800533]
-position = Vector2(1136, 0)
 shape = SubResource("RectangleShape2D_eaghv")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Floor/CollisionShape2D" unique_id=306521913]
-position = Vector2(-7.6293945e-05, -4.7683716e-07)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Floor" unique_id=306521913]
+position = Vector2(-0.00012207031, 0)
 scale = Vector2(2288, 15.999999)
 mesh = SubResource("QuadMesh_5qk0w")
 
-[node name="Floor2" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
-position = Vector2(40, 480)
+[node name="leftWall" type="StaticBody2D" parent="Sisyphus" unique_id=728353870]
+modulate = Color(0.44755095, 0.44755095, 0.44755095, 1)
+self_modulate = Color(0.40756536, 0.4075654, 0.40756524, 1)
+position = Vector2(24, 464)
+collision_layer = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Floor2" unique_id=1666385820]
-position = Vector2(1136, 0)
-shape = SubResource("RectangleShape2D_eaghv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/leftWall" unique_id=1009497456]
+shape = SubResource("RectangleShape2D_orrq1")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/Floor2/CollisionShape2D" unique_id=516561575]
-position = Vector2(-7.6293945e-05, -4.7683716e-07)
-scale = Vector2(2288, 15.999999)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sisyphus/leftWall" unique_id=2024963478]
+position = Vector2(-5.684342e-14, -5.9604645e-08)
+scale = Vector2(15.999997, 239.99997)
 mesh = SubResource("QuadMesh_5qk0w")

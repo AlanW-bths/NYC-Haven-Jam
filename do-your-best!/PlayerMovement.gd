@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 
-var speed = 150.0
-var sprint_speed = 300.0
-var acceleration = 800.0
-var deceleration = 600.0
-var jump_velocity = -400.0
+var speed = 75.0
+var sprint_speed = 150.0
+var acceleration = 400.0
+var deceleration = 300.0
+var jump_velocity = -200.0
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
