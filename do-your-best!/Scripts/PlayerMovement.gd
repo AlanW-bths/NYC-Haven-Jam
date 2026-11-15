@@ -8,6 +8,12 @@ var deceleration = 150.0
 var jump_velocity = -200.0
 var force = 80.0
 
+var original_position: Vector2
+
+func _ready():
+	# Store the starting position
+	original_position = position
+
 func _physics_process(delta: float) -> void:
 	# Apply gravity
 	if not is_on_floor():
@@ -19,6 +25,10 @@ func _physics_process(delta: float) -> void:
 	var current_max_speed :float = speed
 	if Input.is_action_pressed("sprint"):
 		current_max_speed = sprint_speed
+	if Input.is_action_just_pressed("reset"):
+		position = original_position
+		velocity = Vector2.ZERO
+
 	#Horizontal movement input
 	var direction := Input.get_axis("left", "right")
 	if direction:
