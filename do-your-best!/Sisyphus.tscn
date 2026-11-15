@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://jkyyrlob8575"]
 
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://Scripts/PlayerMovement.gd" id="1_0c5gw"]
-[ext_resource type="Texture2D" uid="uid://cg7iwahgbk6fs" path="res://icon.svg" id="2_arf4r"]
+[ext_resource type="Texture2D" uid="uid://cqv6mlla7lgop" path="res://mouse-1.png.png" id="2_fhhho"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
 [ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://sisyphus_map.png" id="3_arf4r"]
+[ext_resource type="Texture2D" uid="uid://bwxv7epu8306l" path="res://mouse-2.png.png" id="3_un3nu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
 size = Vector2(8, 8)
 
 [sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_un3nu"]
+frames = 2
+speed_scale = 2.0
+frame_0/texture = ExtResource("2_fhhho")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("3_un3nu")
+frame_1/duration = 0.25
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -36,13 +45,14 @@ script = ExtResource("1_0c5gw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2008870430]
 shape = SubResource("RectangleShape2D_5qk0w")
+debug_color = Color(0, 0.6, 0.69803923, 0)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Player/CollisionShape2D" unique_id=914085179]
-position = Vector2(2.3841858e-07, -2.3841858e-07)
+position = Vector2(0, -3)
 rotation = 3.1415927
-scale = Vector2(7.9999995, 7.9999995)
+scale = Vector2(-15, 15)
 mesh = SubResource("QuadMesh_orrq1")
-texture = ExtResource("2_arf4r")
+texture = SubResource("AnimatedTexture_un3nu")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=2110093978]
 scale = Vector2(-2.720001, 1)
@@ -60,10 +70,11 @@ script = ExtResource("3_378f1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1666385820]
 shape = SubResource("CircleShape2D_5qk0w")
+debug_color = Color(0.64416385, 0.5205552, 0.14447093, 0.41960785)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Ball" unique_id=516561575]
-modulate = Color(1, 0, 0, 1)
-self_modulate = Color(1, 0, 0, 1)
+modulate = Color(0.9137255, 0.81960785, 0.0627451, 0.89411765)
+self_modulate = Color(1, 1, 0, 1)
 position = Vector2(1.1444092e-05, 0)
 scale = Vector2(16.000021, 16.000029)
 mesh = SubResource("SphereMesh_0e48y")
