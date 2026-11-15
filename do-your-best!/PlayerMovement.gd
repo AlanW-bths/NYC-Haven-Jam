@@ -27,9 +27,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		#Decelerate
 		velocity.x = move_toward(velocity.x, 0, deceleration * delta)
+	move_and_slide()
 	if move_and_slide(): # true if collided
 		for i in get_slide_collision_count():
 			var col = get_slide_collision(i)
 			if col.get_collider() is RigidBody2D:
 				col.get_collider().apply_force(col.get_normal() * -force)
-	move_and_slide()

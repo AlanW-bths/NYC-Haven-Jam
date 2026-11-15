@@ -8,6 +8,9 @@ size = Vector2(8, 8)
 
 [sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
+bounce = 0.95
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qk0w"]
 radius = 8.0
 
@@ -26,6 +29,7 @@ size = Vector2(16, 240)
 [node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
 position = Vector2(8, 624)
 collision_layer = 3
+floor_stop_on_slope = false
 script = ExtResource("1_0c5gw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2008870430]
@@ -46,10 +50,12 @@ zoom = Vector2(4, 4)
 position = Vector2(-32, 48)
 
 [node name="Ball" type="RigidBody2D" parent="Sisyphus" unique_id=1400348022]
-position = Vector2(72, 568)
+position = Vector2(72, 576)
 collision_layer = 3
 collision_priority = 2.0
-mass = 0.025
+mass = 0.02
+physics_material_override = SubResource("PhysicsMaterial_0c5gw")
+gravity_scale = 0.582
 contact_monitor = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sisyphus/Ball" unique_id=1666385820]
