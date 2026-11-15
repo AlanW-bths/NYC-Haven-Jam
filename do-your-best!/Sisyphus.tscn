@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://Scripts/PlayerMovement.gd" id="1_0c5gw"]
 [ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="1_fhhho"]
 [ext_resource type="Script" uid="uid://dhvqvxh631yri" path="res://Scripts/transition.gd" id="1_un3nu"]
+[ext_resource type="Texture2D" uid="uid://ca22j8pwukdib" path="res://Assets/sewer.png" id="3_00d75"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
 [ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://Assets/sisyphus_map.png" id="3_arf4r"]
+[ext_resource type="Texture2D" uid="uid://b7kca460h1gck" path="res://Assets/longerpipe.png" id="4_mc2ep"]
 [ext_resource type="Texture2D" uid="uid://8ls6im6axylh" path="res://Assets/squouse-1.png.png" id="5_un3nu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
@@ -76,6 +78,7 @@ modulate = Color(0.34901962, 0.3372549, 0.32156864, 1)
 position = Vector2(819.5, 243.49997)
 scale = Vector2(4841, 502.99994)
 mesh = SubResource("QuadMesh_5qk0w")
+texture = ExtResource("3_00d75")
 
 [node name="Map" type="StaticBody2D" parent="." unique_id=1579771505]
 position = Vector2(1750, 382)
@@ -107,14 +110,17 @@ skew = 0.3275894
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/leftWall" unique_id=1009497456]
-position = Vector2(-0.24247551, 0.23835373)
+position = Vector2(101.11759, 21.913181)
+rotation = -0.75398225
 shape = SubResource("RectangleShape2D_orrq1")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Map/leftWall" unique_id=1016204825]
 modulate = Color(0.7387843, 0.72630733, 0.7097028, 1)
-position = Vector2(-0.36158562, 0.56025124)
-scale = Vector2(577.3259, 817.5015)
+position = Vector2(429.23135, 259.47852)
+rotation = 2.4521875
+scale = Vector2(429.8304, 100)
 mesh = SubResource("QuadMesh_eaghv")
+texture = ExtResource("4_mc2ep")
 
 [node name="Floor1" type="CollisionPolygon2D" parent="Map" unique_id=1520857355]
 polygon = PackedVector2Array(-2452.7222, 496, -2500, 500, -263.61035, 500, -267.90845, 368, -290.83105, 370, -372.49292, 98, -749.2838, 396, -948.4242, 408, -1527.2207, 362, -1604.5847, 392, -1598.854, 444, -1630.3726, 448, -1630.3726, 400, -1707.7366, 432, -1704.8711, 450, -1732.0918, 454, -1733.5244, 434, -1799.427, 458, -1852.4355, 460, -1958.4529, 438, -1949.8568, 466, -1984.2407, 470, -1991.404, 442, -2088.8252, 476, -2174.7852, 482, -2203.4385, 444, -2303.725, 486)
@@ -159,7 +165,7 @@ polygon = PackedVector2Array(666.18896, 242, 858.166, 182, 925.5012, 170, 869.62
 polygon = PackedVector2Array(815.18604, 152, 982.80786, 86, 1088.8252, 70)
 
 [node name="Rectangle" type="CollisionPolygon2D" parent="Map" unique_id=100810552]
-polygon = PackedVector2Array(2388.252, 168, 2500, 168, 2500, 178, 2388.252, 178)
+polygon = PackedVector2Array(2388.252, 168, 2500, 168, 2500, 178, 2470.0642, 178.00002, 2388.252, 178)
 
 [node name="SisyphusMap" type="Sprite2D" parent="Map" unique_id=1618745220]
 texture = ExtResource("3_arf4r")
