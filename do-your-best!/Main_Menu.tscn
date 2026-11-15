@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://brpdhscj6i0xe" path="res://start_pressed.png" id="3_3mro0"]
 [ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="3_gtid3"]
 [ext_resource type="Texture2D" uid="uid://cyv5ymty836fu" path="res://start_default.png" id="4_tu7k8"]
-[ext_resource type="Texture2D" uid="uid://epfy7vb4jiv6" path="res://pipe.png" id="6_tu7k8"]
-[ext_resource type="Texture2D" uid="uid://7wmxc3oragyq" path="res://pipe_intersection.png" id="7_5cvai"]
+[ext_resource type="Texture2D" uid="uid://epfy7vb4jiv6" path="res://Assets/pipe.png" id="6_tu7k8"]
+[ext_resource type="Texture2D" uid="uid://7wmxc3oragyq" path="res://Assets/pipe_intersection.png" id="7_5cvai"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tu7k8"]
 
 [node name="Main Menu" type="Control" unique_id=1987918872]
 layout_mode = 3
@@ -852,6 +854,13 @@ texture = ExtResource("7_5cvai")
 position = Vector2(1096.0001, 557.99994)
 scale = Vector2(3.1, 3.1)
 texture = ExtResource("7_5cvai")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=496510453]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(511, 447)
+scale = Vector2(64, 64)
+mesh = SubResource("SphereMesh_tu7k8")
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b2051k73g5c7e"]
+
+[ext_resource type="Script" uid="uid://ddyje6kglb7vj" path="res://win.gd" id="1_a03an"]
+
+[node name="Control" type="Control" unique_id=1738103121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a03an")
+
+[node name="Button" type="Button" parent="." unique_id=67039621]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 139.0
+offset_right = 1042.0
+offset_bottom = 333.0
+text = "YOU WIN, Click on me to move back to the Main Menu!
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
