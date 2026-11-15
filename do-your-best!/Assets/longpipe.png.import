@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8ls6im6axylh"
-path="res://.godot/imported/squouse-1.png.png-f29349bc3a0d175e7b6d8c52010c43d1.ctex"
+uid="uid://cpb2y2uclgs2a"
+path="res://.godot/imported/longpipe.png-e34a2edb7be966bd1bb1a7764dbb9cc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://squouse-1.png.png"
-dest_files=["res://.godot/imported/squouse-1.png.png-f29349bc3a0d175e7b6d8c52010c43d1.ctex"]
+source_file="res://Assets/longpipe.png"
+dest_files=["res://.godot/imported/longpipe.png-e34a2edb7be966bd1bb1a7764dbb9cc9.ctex"]
 
 [params]
 

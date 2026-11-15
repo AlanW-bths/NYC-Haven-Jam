@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyv5ymty836fu"
-path="res://.godot/imported/start_default.png-91345a4e3c718ee2dca1ad9a59527ece.ctex"
+uid="uid://8ls6im6axylh"
+path="res://.godot/imported/squouse-1.png.png-3a99e5324556c295c4b2d26ef7694d2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://start_default.png"
-dest_files=["res://.godot/imported/start_default.png-91345a4e3c718ee2dca1ad9a59527ece.ctex"]
+source_file="res://Assets/squouse-1.png.png"
+dest_files=["res://.godot/imported/squouse-1.png.png-3a99e5324556c295c4b2d26ef7694d2b.ctex"]
 
 [params]
 

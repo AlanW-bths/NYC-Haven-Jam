@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bxg41gwnj4bw3"]
 
 [ext_resource type="Script" uid="uid://cc7ku7bkv0gcb" path="res://Scripts/MainMenu.gd" id="1_m625n"]
-[ext_resource type="Texture2D" uid="uid://ej26r6x30pki" path="res://start_hover.png" id="2_257up"]
-[ext_resource type="Texture2D" uid="uid://brpdhscj6i0xe" path="res://start_pressed.png" id="3_3mro0"]
+[ext_resource type="Texture2D" uid="uid://ej26r6x30pki" path="res://Assets/start_hover.png" id="2_257up"]
+[ext_resource type="Texture2D" uid="uid://brpdhscj6i0xe" path="res://Assets/start_pressed.png" id="3_3mro0"]
 [ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="3_gtid3"]
-[ext_resource type="Texture2D" uid="uid://cyv5ymty836fu" path="res://start_default.png" id="4_tu7k8"]
+[ext_resource type="Texture2D" uid="uid://cyv5ymty836fu" path="res://Assets/start_default.png" id="4_tu7k8"]
 [ext_resource type="Texture2D" uid="uid://epfy7vb4jiv6" path="res://Assets/pipe.png" id="6_tu7k8"]
 [ext_resource type="Texture2D" uid="uid://7wmxc3oragyq" path="res://Assets/pipe_intersection.png" id="7_5cvai"]
 
