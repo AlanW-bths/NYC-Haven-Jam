@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2051k73g5c7e"]
 
 [ext_resource type="Script" uid="uid://ddyje6kglb7vj" path="res://win.gd" id="1_a03an"]
+[ext_resource type="Texture2D" uid="uid://da3j2cy2bylps" path="res://Assets/end.png" id="2_0eiwq"]
 
 [node name="Control" type="Control" unique_id=1738103121]
 layout_mode = 3
@@ -15,15 +16,20 @@ script = ExtResource("1_a03an")
 modulate = Color(1, 0, 0, 1)
 self_modulate = Color(1, 0, 1, 1)
 layout_mode = 0
-offset_left = 489.0
-offset_top = 219.0
-offset_right = 1036.0
-offset_bottom = 413.0
+offset_left = 642.0
+offset_top = 200.0
+offset_right = 1156.0
+offset_bottom = 394.0
 text = "YOU WIN, Click on me to move back to the Main Menu!
 "
 autowrap_mode = 3
 autowrap_trim_flags = 192
 clip_text = true
 icon_alignment = 1
+
+[node name="End" type="Sprite2D" parent="." unique_id=1187526192]
+position = Vector2(319, 333)
+scale = Vector2(20, 20)
+texture = ExtResource("2_0eiwq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

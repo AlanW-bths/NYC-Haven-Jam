@@ -6,6 +6,7 @@ func _ready() -> void:
 	$Main.show()
 	$Main/Timer2.start()
 	$Main/AnimationPlayer.play("fade_in")
+	$Main/AnimationPlayer.await()
 	$Main.hide()
 
 	

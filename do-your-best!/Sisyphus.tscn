@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://Scripts/PlayerMovement.gd" id="1_0c5gw"]
 [ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="1_fhhho"]
 [ext_resource type="Script" uid="uid://dhvqvxh631yri" path="res://Scripts/transition.gd" id="1_un3nu"]
+[ext_resource type="Texture2D" uid="uid://cpb2y2uclgs2a" path="res://Assets/longpipe.png" id="3_00d75"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
 [ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://Assets/sisyphus_map.png" id="3_arf4r"]
 [ext_resource type="Texture2D" uid="uid://8ls6im6axylh" path="res://Assets/squouse-1.png.png" id="5_un3nu"]
+[ext_resource type="Texture2D" uid="uid://b7kca460h1gck" path="res://Assets/longerpipe.png" id="7_ovgts"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -42,6 +44,308 @@ size = Vector2(18.478004, 2)
 
 [node name="Node2D" type="Node2D" unique_id=1121677183]
 script = ExtResource("1_un3nu")
+
+[node name="thepipening" type="Node2D" parent="." unique_id=2074094170]
+
+[node name="Longerpipe" type="Sprite2D" parent="thepipening" unique_id=1450570706]
+position = Vector2(-16, 553)
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe2" type="Sprite2D" parent="thepipening" unique_id=192940114]
+position = Vector2(233, 553)
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe3" type="Sprite2D" parent="thepipening" unique_id=275126499]
+position = Vector2(481, 553)
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe4" type="Sprite2D" parent="thepipening" unique_id=1856742587]
+position = Vector2(729, 553)
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe5" type="Sprite2D" parent="thepipening" unique_id=1823279982]
+position = Vector2(978, 553)
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe10" type="Sprite2D" parent="thepipening" unique_id=1030645568]
+position = Vector2(979, 365.99997)
+rotation = -0.53203744
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe11" type="Sprite2D" parent="thepipening" unique_id=1934994438]
+position = Vector2(1211, 294.99997)
+rotation = -0.05843994
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe12" type="Sprite2D" parent="thepipening" unique_id=1759837058]
+position = Vector2(1105, 418.99994)
+rotation = 1.4429842
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe6" type="Sprite2D" parent="thepipening" unique_id=30206493]
+position = Vector2(854.99994, 548)
+rotation = 1.7324756
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe7" type="Sprite2D" parent="thepipening" unique_id=556287002]
+position = Vector2(600.99994, 574)
+rotation = 1.7324756
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe8" type="Sprite2D" parent="thepipening" unique_id=1616283210]
+position = Vector2(726, 508)
+rotation = 1.7324756
+texture = ExtResource("7_ovgts")
+
+[node name="Longerpipe9" type="Sprite2D" parent="thepipening" unique_id=1614598577]
+position = Vector2(357, 559.99994)
+rotation = 1.7324756
+texture = ExtResource("7_ovgts")
+
+[node name="Longpipe" type="Sprite2D" parent="thepipening" unique_id=1811260595]
+position = Vector2(14.0000305, 617)
+rotation = 0.38109416
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe2" type="Sprite2D" parent="thepipening" unique_id=2042791844]
+position = Vector2(111, 604)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe3" type="Sprite2D" parent="thepipening" unique_id=1032453974]
+position = Vector2(112, 483)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe4" type="Sprite2D" parent="thepipening" unique_id=399840182]
+position = Vector2(113.00001, 362)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe5" type="Sprite2D" parent="thepipening" unique_id=1400379694]
+position = Vector2(269, 590)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe8" type="Sprite2D" parent="thepipening" unique_id=685589727]
+position = Vector2(325, 592)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe6" type="Sprite2D" parent="thepipening" unique_id=927589854]
+position = Vector2(210.99998, 485)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe7" type="Sprite2D" parent="thepipening" unique_id=128390528]
+position = Vector2(153.00002, 379)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe9" type="Sprite2D" parent="thepipening" unique_id=1660446479]
+position = Vector2(265.93164, 485.76428)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe10" type="Sprite2D" parent="thepipening" unique_id=1286577585]
+position = Vector2(207.93167, 379.76428)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe11" type="Sprite2D" parent="thepipening" unique_id=1951753591]
+position = Vector2(370, 583)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe12" type="Sprite2D" parent="thepipening" unique_id=840312053]
+position = Vector2(310.93164, 476.76428)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe13" type="Sprite2D" parent="thepipening" unique_id=1978050403]
+position = Vector2(252.93167, 370.76428)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe14" type="Sprite2D" parent="thepipening" unique_id=1672596081]
+position = Vector2(439, 596)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe15" type="Sprite2D" parent="thepipening" unique_id=1378391913]
+position = Vector2(512.00006, 498.00003)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe16" type="Sprite2D" parent="thepipening" unique_id=1347790179]
+position = Vector2(584, 399.99997)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe17" type="Sprite2D" parent="thepipening" unique_id=696554142]
+position = Vector2(1158.3595, 575.08844)
+rotation = 0.38109416
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe47" type="Sprite2D" parent="thepipening" unique_id=124992787]
+position = Vector2(1173.9999, 560.99994)
+rotation = 0.38109416
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe18" type="Sprite2D" parent="thepipening" unique_id=1203265677]
+position = Vector2(1255.3595, 562.08844)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe19" type="Sprite2D" parent="thepipening" unique_id=258239835]
+position = Vector2(1256.3595, 441.08844)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe20" type="Sprite2D" parent="thepipening" unique_id=43036973]
+position = Vector2(1257.3595, 320.08844)
+rotation = 1.5763865
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe21" type="Sprite2D" parent="thepipening" unique_id=1990375285]
+position = Vector2(1413.3595, 548.08844)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe22" type="Sprite2D" parent="thepipening" unique_id=1084896383]
+position = Vector2(1469.3595, 550.08844)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe23" type="Sprite2D" parent="thepipening" unique_id=1262672741]
+position = Vector2(1355.3595, 443.08844)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe24" type="Sprite2D" parent="thepipening" unique_id=589660446]
+position = Vector2(1297.3595, 337.08844)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe25" type="Sprite2D" parent="thepipening" unique_id=1084154262]
+position = Vector2(1410.2911, 443.85272)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe26" type="Sprite2D" parent="thepipening" unique_id=352921823]
+position = Vector2(1352.2911, 337.85272)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe27" type="Sprite2D" parent="thepipening" unique_id=449558101]
+position = Vector2(1514.3595, 541.08844)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe28" type="Sprite2D" parent="thepipening" unique_id=881643]
+position = Vector2(1455.2911, 434.85272)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe29" type="Sprite2D" parent="thepipening" unique_id=461068108]
+position = Vector2(1397.2911, 328.85272)
+rotation = 1.0665171
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe30" type="Sprite2D" parent="thepipening" unique_id=8256109]
+position = Vector2(1583.3595, 554.08844)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe31" type="Sprite2D" parent="thepipening" unique_id=460896589]
+position = Vector2(1656.3596, 456.08847)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe46" type="Sprite2D" parent="thepipening" unique_id=1184995904]
+position = Vector2(1728.0001, 359.0001)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe32" type="Sprite2D" parent="thepipening" unique_id=856511318]
+position = Vector2(1514, 477.9999)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe33" type="Sprite2D" parent="thepipening" unique_id=386854568]
+position = Vector2(1555, 470)
+rotation = 2.2071917
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe34" type="Sprite2D" parent="thepipening" unique_id=1024662928]
+position = Vector2(1681, 548)
+rotation = 1.0688334
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe35" type="Sprite2D" parent="thepipening" unique_id=664157473]
+position = Vector2(1885.0001, 542.99994)
+rotation = 1.0688334
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe36" type="Sprite2D" parent="thepipening" unique_id=958348305]
+position = Vector2(1840, 558)
+rotation = 1.0688334
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe37" type="Sprite2D" parent="thepipening" unique_id=277282111]
+position = Vector2(2017, 560.00006)
+rotation = 1.0688334
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe38" type="Sprite2D" parent="thepipening" unique_id=1414981243]
+position = Vector2(2047, 548.00006)
+rotation = 1.839284
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe39" type="Sprite2D" parent="thepipening" unique_id=1051515204]
+position = Vector2(2259, 553.99994)
+rotation = 1.839284
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe40" type="Sprite2D" parent="thepipening" unique_id=62649153]
+position = Vector2(2315.9998, 553.99994)
+rotation = 1.3864028
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe41" type="Sprite2D" parent="thepipening" unique_id=1496689698]
+position = Vector2(2178, 513.00006)
+rotation = 1.3864028
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe42" type="Sprite2D" parent="thepipening" unique_id=1615218452]
+position = Vector2(2222.0002, 519.0001)
+rotation = 1.7735081
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe43" type="Sprite2D" parent="thepipening" unique_id=963786642]
+position = Vector2(2041, 488)
+rotation = 1.7735081
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe44" type="Sprite2D" parent="thepipening" unique_id=474681738]
+position = Vector2(1916.9999, 493.00006)
+rotation = 1.4163737
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe45" type="Sprite2D" parent="thepipening" unique_id=505707179]
+position = Vector2(1749.9999, 501)
+rotation = 1.4163737
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe48" type="Sprite2D" parent="thepipening" unique_id=348367360]
+position = Vector2(2389.9998, 503)
+rotation = 1.4163737
+texture = ExtResource("3_00d75")
+
+[node name="Longpipe49" type="Sprite2D" parent="thepipening" unique_id=141665762]
+position = Vector2(2453.9998, 483)
+rotation = 1.0859995
+texture = ExtResource("3_00d75")
 
 [node name="Ball" type="RigidBody2D" parent="." unique_id=1400348022]
 position = Vector2(27, 622)
@@ -80,6 +384,7 @@ mesh = SubResource("QuadMesh_5qk0w")
 [node name="Map" type="StaticBody2D" parent="." unique_id=1579771505]
 position = Vector2(1750, 382)
 scale = Vector2(0.698, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="rightwall" type="StaticBody2D" parent="Map" unique_id=2047687576]
 position = Vector2(2777.937, 436)
