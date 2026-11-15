@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var speed = 75.0
 var sprint_speed = 150.0
-var acceleration = 200.0
+var acceleration = 150.0
 var deceleration = 150.0
 var jump_velocity = -200.0
 var force = 80.0
@@ -12,9 +12,6 @@ var original_position: Vector2
 func _ready():
 	# Store the starting position
 	original_position = position
-	if $CollisionShape2D:
-		# Ensure the parent has a collision layer/mask set to detect Win_Zone
-		$CollisionShape2D.connect("body_entered", Callable(self, "_on_body_entered"))
 func _trigger_win():
 	print("You win!")
 	get_tree().change_scene_to_file("res://WinScreen.tscn")

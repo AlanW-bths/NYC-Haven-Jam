@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dhvqvxh631yri" path="res://Scripts/transition.gd" id="1_un3nu"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
 [ext_resource type="Texture2D" uid="uid://pkl422fopq2v" path="res://Assets/sisyphus_map.png" id="3_arf4r"]
-[ext_resource type="Texture2D" uid="uid://8ls6im6axylh" path="res://squouse-1.png.png" id="5_un3nu"]
+[ext_resource type="Texture2D" uid="uid://8ls6im6axylh" path="res://Assets/squouse-1.png.png" id="5_un3nu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -16,12 +16,17 @@ radius = 8.0
 [sub_resource type="SphereMesh" id="SphereMesh_0e48y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaghv"]
-size = Vector2(2288, 16)
+size = Vector2(4384, 503)
 
 [sub_resource type="QuadMesh" id="QuadMesh_5qk0w"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fad1"]
+size = Vector2(481.2363, 380.72888)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vyfme"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_orrq1"]
-size = Vector2(16, 816.85345)
+size = Vector2(576.887, 816.85345)
 
 [sub_resource type="QuadMesh" id="QuadMesh_eaghv"]
 
@@ -31,7 +36,7 @@ size = Vector2(8, 8)
 [sub_resource type="QuadMesh" id="QuadMesh_orrq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyfme"]
-size = Vector2(20, 2)
+size = Vector2(18.478004, 2)
 
 [sub_resource type="QuadMesh" id="QuadMesh_4fad1"]
 
@@ -63,35 +68,52 @@ position = Vector2(1144, 640)
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=353800533]
+position = Vector2(1048, 243.5)
 shape = SubResource("RectangleShape2D_eaghv")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Floor" unique_id=306521913]
 modulate = Color(0.34901962, 0.3372549, 0.32156864, 1)
-position = Vector2(-0.00012207031, 0)
-scale = Vector2(2288, 15.999999)
+position = Vector2(819.5, 243.49997)
+scale = Vector2(4841, 502.99994)
 mesh = SubResource("QuadMesh_5qk0w")
 
 [node name="Map" type="StaticBody2D" parent="." unique_id=1579771505]
 position = Vector2(1750, 382)
 scale = Vector2(0.698, 0.5)
 
+[node name="rightwall" type="StaticBody2D" parent="Map" unique_id=2047687576]
+position = Vector2(2777.937, 436)
+rotation = -0.65166384
+scale = Vector2(1.5812427, 1.8847281)
+skew = 0.2785635
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/rightwall" unique_id=1818255356]
+position = Vector2(-0.011226654, 0.56555367)
+shape = SubResource("RectangleShape2D_4fad1")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Map/rightwall" unique_id=852247372]
+modulate = Color(0.34901962, 0.3372549, 0.32156864, 1)
+position = Vector2(-0.41584396, 0.5907006)
+scale = Vector2(482.30472, 380.79666)
+mesh = SubResource("QuadMesh_vyfme")
+
 [node name="leftWall" type="StaticBody2D" parent="Map" unique_id=728353870]
 modulate = Color(0.44755095, 0.44755095, 0.44755095, 1)
 self_modulate = Color(0.40756536, 0.4075654, 0.40756524, 1)
-position = Vector2(-2621.7766, 351)
+position = Vector2(-3212.034, 328)
 rotation = -0.9491279
 scale = Vector2(1.7395778, 1.7396547)
 skew = 0.3275894
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/leftWall" unique_id=1009497456]
-position = Vector2(-3.0517578e-05, -288.42676)
+position = Vector2(-0.24247551, 0.23835373)
 shape = SubResource("RectangleShape2D_orrq1")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Map/leftWall" unique_id=1016204825]
 modulate = Color(0.7387843, 0.72630733, 0.7097028, 1)
-position = Vector2(0.038083855, -288.10492)
-scale = Vector2(16.12446, 817.5015)
+position = Vector2(-0.36158562, 0.56025124)
+scale = Vector2(577.3259, 817.5015)
 mesh = SubResource("QuadMesh_eaghv")
 
 [node name="Floor1" type="CollisionPolygon2D" parent="Map" unique_id=1520857355]
@@ -182,11 +204,13 @@ scale = Vector2(4.6, 1)
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Win_Zone" unique_id=6438243]
+position = Vector2(-0.7608032, 0)
 shape = SubResource("RectangleShape2D_vyfme")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Win_Zone" unique_id=789372827]
 modulate = Color(1, 0, 0, 1)
-scale = Vector2(20, 2)
+position = Vector2(-0.76089764, 0)
+scale = Vector2(18.478205, 2)
 mesh = SubResource("QuadMesh_4fad1")
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
