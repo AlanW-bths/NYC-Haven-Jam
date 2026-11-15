@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b28oo23mwfx3d" path="res://Assets/Quit_hover.png" id="11_67ry2"]
 [ext_resource type="Texture2D" uid="uid://cqv6mlla7lgop" path="res://Assets/mouse-1.png.png" id="15_jtv0r"]
 [ext_resource type="Texture2D" uid="uid://bwxv7epu8306l" path="res://Assets/mouse-2.png.png" id="16_e8o1n"]
+[ext_resource type="AudioStream" uid="uid://4p8bqqkvdlwr" path="res://Assets/bombinsound-lofi-upbeat-opener-version-4-clouds-628565.mp3" id="17_jtv0r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
 bounce = 0.95
@@ -582,14 +583,18 @@ position = Vector2(3503, 478)
 scale = Vector2(0.4843769, 0.4843769)
 sprite_frames = SubResource("SpriteFrames_vpjif")
 autoplay = "default"
-frame_progress = 0.12857932
+frame_progress = 0.76640594
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1631399651]
 position = Vector2(3473.8225, 455.2405)
 scale = Vector2(0.6360922, 0.6079482)
 sprite_frames = SubResource("SpriteFrames_fb8vc")
 autoplay = "default"
-frame_progress = 0.2973557
+frame_progress = 0.9352274
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1070266230]
+stream = ExtResource("17_jtv0r")
+autoplay = true
 
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
