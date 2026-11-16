@@ -6,3 +6,6 @@ Jumping is the key to success.
 
 The Game!
 - https://itsme-hithere.itch.io/wheel-it-over
+
+Submitted to Jam 11/15/2026
+This Repo will be updated later on as me and the team decided to keep working on this after the Jam!
