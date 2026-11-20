@@ -19,7 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://4p8bqqkvdlwr" path="res://Assets/bombinsound-lofi-upbeat-opener-version-4-clouds-628565.mp3" id="17_jtv0r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0c5gw"]
-bounce = 0.95
+bounce = 0.9
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5qk0w"]
 radius = 8.0
@@ -40,6 +40,11 @@ size = Vector2(481.2363, 380.72888)
 size = Vector2(576.887, 816.85345)
 
 [sub_resource type="QuadMesh" id="QuadMesh_eaghv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3htop"]
+size = Vector2(0.99999857, 0.965518)
+
+[sub_resource type="QuadMesh" id="QuadMesh_3htop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qk0w"]
 size = Vector2(8, 8)
@@ -524,6 +529,17 @@ polygon = PackedVector2Array(2388.252, 168, 2500, 168, 2500, 178, 2388.252, 178)
 
 [node name="SisyphusMap" type="Sprite2D" parent="Map" unique_id=1618745220]
 texture = ExtResource("3_arf4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map" unique_id=383811501]
+position = Vector2(-194.84253, 494.00012)
+scale = Vector2(42.980076, 14.500012)
+shape = SubResource("RectangleShape2D_3htop")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Map" unique_id=48847157]
+modulate = Color(0.34901962, 0.3372549, 0.32156864, 1)
+position = Vector2(-194.84239, 494)
+scale = Vector2(42.980076, 14.5)
+mesh = SubResource("QuadMesh_3htop")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=676528423]
 position = Vector2(10, 624)
