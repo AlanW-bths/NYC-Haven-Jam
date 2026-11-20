@@ -15,7 +15,7 @@ func _on_exit_pressed() -> void:
 
 func _on_leave_timeout() -> void:
 	if button_type == "exit":
-		get_tree().change_scene_to_file("res://Main_Menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Main_Menu.tscn")
 		button_type = null
 
 func _on_enter_timeout() -> void:

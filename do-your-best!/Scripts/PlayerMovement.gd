@@ -14,7 +14,7 @@ func _ready():
 	original_position = position
 func _trigger_win():
 	print("You win!")
-	get_tree().change_scene_to_file("res://WinScreen.tscn")
+	get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")
 		
 func _physics_process(delta: float) -> void:
 	# Apply gravity
