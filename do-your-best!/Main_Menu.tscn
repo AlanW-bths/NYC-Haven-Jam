@@ -850,7 +850,7 @@ position = Vector2(186, 293)
 scale = Vector2(6, 6)
 texture = ExtResource("11_spy7q")
 
-[node name="Main" parent="." unique_id=875315298 instance=ExtResource("3_gtid3")]
+[node name="Exit" parent="." unique_id=875315298 instance=ExtResource("3_gtid3")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -863,12 +863,17 @@ offset_bottom = 4067.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="fade_timer" type="Timer" parent="Main" unique_id=571045922]
+[node name="fade_timer" type="Timer" parent="Exit" unique_id=571045922]
 wait_time = 0.9
 
-[node name="Timer2" type="Timer" parent="Main" unique_id=204439587]
+[node name="Load_In" parent="." unique_id=2071259221 instance=ExtResource("3_gtid3")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+
+[node name="enter" type="Timer" parent="Load_In" unique_id=1705689972]
 
 [connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="timeout" from="Main/fade_timer" to="." method="_on_fade_timer_timeout"]
-[connection signal="timeout" from="Main/Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Exit/fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="timeout" from="Load_In/enter" to="." method="_on_enter_timeout"]

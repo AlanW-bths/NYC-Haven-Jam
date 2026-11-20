@@ -556,13 +556,6 @@ texture_hover = ExtResource("11_67ry2")
 texture_disabled = ExtResource("10_i7m57")
 stretch_mode = 5
 
-[node name="Main" parent="." unique_id=875315298 instance=ExtResource("1_fhhho")]
-visible = false
-
-[node name="Timer" type="Timer" parent="Main" unique_id=209139117]
-
-[node name="Timer2" type="Timer" parent="Main" unique_id=1443768716]
-
 [node name="Win_Zone" type="StaticBody2D" parent="." unique_id=796326004]
 position = Vector2(3461.0002, 488)
 scale = Vector2(4.6, 1)
@@ -597,6 +590,16 @@ stream = ExtResource("17_jtv0r")
 autoplay = true
 playback_type = 1
 
+[node name="Load_In" parent="." unique_id=875315298 instance=ExtResource("1_fhhho")]
+visible = false
+
+[node name="enter" type="Timer" parent="Load_In" unique_id=209139117]
+
+[node name="Exit" parent="." unique_id=2082071806 instance=ExtResource("1_fhhho")]
+visible = false
+
+[node name="leave" type="Timer" parent="Exit" unique_id=582634302]
+
 [connection signal="pressed" from="Player/exit" to="." method="_on_exit_pressed"]
-[connection signal="timeout" from="Main/Timer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Main/Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Load_In/enter" to="." method="_on_enter_timeout"]
+[connection signal="timeout" from="Exit/leave" to="." method="_on_leave_timeout"]
