@@ -1,0 +1,13 @@
+Coding:
+  - Fix Physics 
+    1) fix the issue where if the ball lands vertically on top of the player, the player gets stuck / frozen in place
+    2) fix issue of random hyper bouncy-ness of ball
+  - a Auto adjust to surfaces so the player body doesnt just glide up slope on a corner
+    1) rotation detection?
+    2) change rotation based of the angle / hitbox surface of the map
+Assets / Art / Models:
+  - Add More map
+    1) Add more map vertically (islands or large slanted land)
+    2) traps? -> pushers, wind / fans, slippery surfaces, ect
+  - Checkpoints? maybe not
+  - fix up some of the current sprites to make it look less weird
