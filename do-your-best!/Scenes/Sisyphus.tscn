@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://jkyyrlob8575"]
 
 [ext_resource type="Script" uid="uid://5vyfvxhy7l66" path="res://Scripts/PlayerMovement.gd" id="1_0c5gw"]
-[ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://transition.tscn" id="1_fhhho"]
+[ext_resource type="PackedScene" uid="uid://bwq2dssblfak5" path="res://Scenes/transition.tscn" id="1_fhhho"]
 [ext_resource type="Script" uid="uid://dhvqvxh631yri" path="res://Scripts/transition.gd" id="1_un3nu"]
 [ext_resource type="Texture2D" uid="uid://cpb2y2uclgs2a" path="res://Assets/longpipe.png" id="3_00d75"]
 [ext_resource type="Script" uid="uid://b68aqg6b548ev" path="res://Scripts/ball_reset.gd" id="3_378f1"]
