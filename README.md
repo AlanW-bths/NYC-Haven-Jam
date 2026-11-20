@@ -9,4 +9,4 @@ The Game!
 
 Submitted to Jam 11/15/2026
 
-This Repo will be updated later on as me and the team decided to keep working on this after the Jam!
+This Repo will be updated later on as we (the team) decided to keep working on this after the Jam!
